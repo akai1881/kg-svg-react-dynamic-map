@@ -82,12 +82,11 @@ class RadioSVGMap extends React.Component {
 
         let pointer = null;
 
-        if (location.id.includes("Vector")) {
+        if (this.isPointerOrLake(location)) {
             const parent = Array.from(this.parents).find(item => location.id.includes(item.id));
             parent.focus();
         } else {
             pointer = Array.from(this.pointers).find(item => item.id.split("_").includes(location.id));
-
             location.focus();
         }
 
@@ -100,6 +99,10 @@ class RadioSVGMap extends React.Component {
         }
     }
 
+    isPointerOrLake({ id }) {
+        return id.includes("Vector") || id.includes("ozero");
+    }
+
     /**
      * Handle click on a location
      *
@@ -110,6 +113,8 @@ class RadioSVGMap extends React.Component {
 
         // Select clicked location if not already selected
         if (clickedLocation !== this.state.selectedLocation) {
+            this.selectLocation(clickedLocation);
+        } else if (this.isPointerOrLake(clickedLocation)) {
             this.selectLocation(clickedLocation);
         }
     }

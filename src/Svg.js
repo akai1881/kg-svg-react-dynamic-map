@@ -37,6 +37,7 @@ function SVGMap(props) {
                         onMouseOut={props.onLocationMouseOut}
                         onMouseMove={props.onLocationMouseMove}
                         onClick={props.onLocationClick}
+                        onDoubleClick={props.onLocationClick}
                         // onKeyDown={props.onLocationKeyDown}
                         onFocus={e => props.onLocationFocus(e, location)}
                         onBlur={props.onLocationBlur}

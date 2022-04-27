@@ -32,7 +32,7 @@ function App() {
     };
 
     const getLocationClassName = (location, index) => {
-        return `svg-map__location svg-map__location--heat${index % 14}`;
+        return `svg-map__location svg-map__location--heat${index % 15}`;
     };
 
     return (
