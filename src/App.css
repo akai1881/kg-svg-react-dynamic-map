@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+.kg-map {
+    width: 500px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.kg-map .svg-map__location--heat0 {
+    fill: #cccccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.kg-map .svg-map__location--heat1 {
+    fill: #e6e6e6;
+}
+.kg-map .svg-map__location--heat2 {
+    fill: #b3b3b3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.kg-map .svg-map__location--heat3 {
+    fill: #e6e6e6;
+}
+.kg-map .svg-map__location--heat4 {
+    fill: #e6e6e6;
+}
+.kg-map .svg-map__location--heat5 {
+    fill: #b3b3b3;
+}
+.kg-map .svg-map__location--heat6 {
+    fill: #cccccc;
 }
 
-.App-link {
-  color: #61dafb;
+.kg-map .svg-map__location--heat7,
+.svg-map__location--heat8,
+.svg-map__location--heat9,
+.svg-map__location--heat10,
+.svg-map__location--heat11,
+.svg-map__location--heat12,
+.svg-map__location--heat13 {
+    fill: green;
+    outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.kg-map .svg-map__location--heat0:focus ~ .svg-map__location--heat11 {
+    fill: white;
+    outline: none;
+}
+
+.kg-map .svg-map__location--heat1:focus ~ .svg-map__location--heat12 {
+    fill: white;
+    outline: none;
+}
+
+.kg-map .svg-map__location--heat2:focus ~ .svg-map__location--heat10 {
+    fill: white;
+    outline: none;
+}
+
+.kg-map .svg-map__location--heat3:focus ~ .svg-map__location--heat13 {
+    fill: white;
+    outline: none;
+}
+
+.kg-map .svg-map__location--heat4:focus ~ .svg-map__location--heat9 {
+    fill: white;
+    outline: none;
+}
+
+.kg-map .svg-map__location--heat5:focus ~ .svg-map__location--heat8 {
+    fill: white;
+    outline: none;
+}
+
+.kg-map .svg-map__location--heat6:focus ~ .svg-map__location--heat7 {
+    fill: white;
+    outline: none;
+}
+
+.kg-map .svg-map__location--heat0:focus,
+.svg-map__location--heat1:focus,
+.svg-map__location--heat2:focus,
+.svg-map__location--heat3:focus,
+.svg-map__location--heat4:focus,
+.svg-map__location--heat5:focus,
+.svg-map__location--heat6:focus {
+    fill: #008045;
+    outline: none;
 }
